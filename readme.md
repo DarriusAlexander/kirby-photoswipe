@@ -12,7 +12,7 @@ kirby plugin:install schnti/kirby-photoswipe
 
 ### Install PhotoSwipe
 
-```html
+```
 <!-- Core CSS file -->
 <link rel="stylesheet" href="path/to/photoswipe.css"> 
 
@@ -31,14 +31,14 @@ kirby plugin:install schnti/kirby-photoswipe
 
 use this right before closing `</body>` tag
 
-```php
+```
 <?= \ka\kirby\PhotoSwipe::init(); ?>
 ```
 
 The `init()` function will add the PhotoSwipe (.pswp) element to DOM and the pure Vanilla JS implementation to build an array of slides from a list of links.
 
 ### Add static gallery
-```html
+```
 <div class="photoswipe" itemscope itemtype="http://schema.org/ImageGallery">
 
     <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
@@ -59,9 +59,9 @@ The `init()` function will add the PhotoSwipe (.pswp) element to DOM and the pur
 </div>
 ```
 
-### Add dynamic gallery with kirby markup (and bootstrap grid)
+### or add dynamic gallery with kirby markup (and [Bootstrap 3.3](https://getbootstrap.com/docs/3.3/) Grid)
 
-```php
+```
 <div class="photoswipe" itemscope itemtype="http://schema.org/ImageGallery">
     <div class="row">
         <?php foreach ($page->images()->sortBy('sort', 'asc') as $image): ?>
@@ -77,7 +77,7 @@ The `init()` function will add the PhotoSwipe (.pswp) element to DOM and the pur
                 <figcaption itemprop="caption description"><?= $image->text()->kirbytext() ?></figcaption>
             </figure>
 
-        <?php endforeach ?>
+        <?php endforeach; ?>
     </div>
 </div>
 ```
