@@ -13,6 +13,16 @@ kirby plugin:install schnti/kirby-photoswipe
 ### Install PhotoSwipe
 
 ```
+bower install photoswipe --save
+```
+or
+```
+npm install photoswipe --save
+```
+
+Add sources
+
+```
 <!-- Core CSS file -->
 <link rel="stylesheet" href="path/to/photoswipe.css"> 
 
@@ -65,7 +75,7 @@ The `init()` function will add the PhotoSwipe (.pswp) element to DOM and the pur
 <div class="photoswipe" itemscope itemtype="http://schema.org/ImageGallery">
     <div class="row">
         <?php foreach ($page->images()->sortBy('sort', 'asc') as $image): ?>
-            <?php $pic = $image->width(1000); ?>
+            <?php $pic = $image->resize(1000, null, 90); ?>
             <figure class="col-xs-6 col-sm-6 col-md-4 col-lg-4" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                 <a href="<?= $pic->url(); ?>" itemprop="contentUrl" data-size="<?= $pic->width(); ?>x<?= $pic->height(); ?>"
                    title="<?= $image->text()->value(); ?>">
