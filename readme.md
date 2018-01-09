@@ -92,6 +92,34 @@ The `init()` function will add the PhotoSwipe (.pswp) element to DOM and the pur
 </div>
 ```
 
+### or use the photoswipe kirbytag
 
+```
+(photoswipe: image.jpg
+    width: 200
+    height: 200
+    quality: 70
+    crop: true
+    class: img-thumbnail
+    text: figcaption text
+)
+```
+
+#### Tag Attributes
+
+* **class**: Integer (<img>-Tag class, default: 'img-responsive')
+* **text**: String (Figcaption Content, default: '')
+
+**Thumbnail**
+ * **width**: Integer (thumbnail resize width, default: 300)
+ * **height**: Integer (thumbnail resize height, default: null)
+ * **quality**: Integer (jpeg quality from 0 to 100, default: 70)
+ * **crop**: Boolean (enable cropping the file according to the given width and height parameters, default: false)
+ 
+**Image**
+ * **pwidth**: Integer (image resize widt, default: 1000)
+ * **pheight**: Integer (image resize height, default: null)
+ * **pquality**: Integer (jpeg quality from 0 to 100, default: 80)
+ 
 ## Build
 [minifier](https://kangax.github.io/html-minifier/)
