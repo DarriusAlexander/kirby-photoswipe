@@ -107,7 +107,7 @@ The `init()` function will add the PhotoSwipe (.pswp) element to DOM and the pur
 
 #### Tag Attributes
 
-* **class**: Integer (<img>-Tag class, default: 'img-responsive')
+* **class**: Integer (img-Tag class, default: 'img-responsive')
 * **text**: String (Figcaption Content, default: '')
 
 **Thumbnail**
